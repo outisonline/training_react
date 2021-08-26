@@ -1,9 +1,9 @@
 import React from "react";
-import { ISquare } from "../interface";
+import { SquareValue } from "../interface";
 import Square from "./Square";
 
 interface BoardProps {
-  squares: ISquare[];
+  squares: SquareValue[];
   onClick: (i: number) => void;
 }
 class Board extends React.Component<BoardProps> {
