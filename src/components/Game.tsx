@@ -1,9 +1,9 @@
 import React from "react";
-import { ISquare, History } from "../interface";
+import { SquareValue, History as HistoryItem } from "../interface";
 import Board from "./Board";
 
 interface GameState {
-  history: History[];
+  history: HistoryItem[];
   stepNumber: number;
   xIsNext: boolean;
 }
@@ -75,7 +75,7 @@ class Game extends React.Component<{}, GameState> {
   }
 }
 
-function calculateWinner(squares: Array<ISquare>) {
+function calculateWinner(squares: SquareValue[]) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
